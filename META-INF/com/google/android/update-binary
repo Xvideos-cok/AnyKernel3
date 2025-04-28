@@ -544,6 +544,7 @@ if [ -f banner ]; then
 fi;
 
 KERNEL_STRING="$(file_getprop anykernel.sh kernel.string)";
+ui_print " "
 ui_print "$KERNEL_STRING";
 if [ -f version ]; then
   ui_printfile version;
@@ -577,8 +578,6 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
 fi;
 
 ui_print " "
-ui_print "************************************************"
-ui_print " Done, Please Rebbot System!"
-ui_print "************************************************"
+ui_print "Done, Please Rebbot System!"
 export PATH="$OLD_PATH";
 unset OLD_PATH OUTFD ZIPFILE;
